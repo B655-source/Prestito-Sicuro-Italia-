@@ -1,140 +1,123 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prestito Sicuro Italia - Mediazione Creditizia</title>
-
+<title>Northern Maple Immigration Services | Toronto</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#eef2f7;
-}
-
-header{
-background:linear-gradient(90deg,#0d47a1,#1565c0);
-color:white;
-padding:35px;
-text-align:center;
-}
-
-h1{
-margin:0;
-font-size:34px;
-}
-
-.section{
-padding:40px 20px;
-text-align:center;
-}
-
-.form-box{
-background:white;
-max-width:500px;
-margin:auto;
-padding:30px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-input, select{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-width:100%;
-padding:14px;
-background:#1565c0;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
-
-button:hover{
-background:#0d47a1;
-}
-
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:40px;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f6f9;color:#222;}
+header{background:#d52b1e;color:white;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+header h1{font-size:24px;}
+nav a{color:white;text-decoration:none;margin-left:20px;font-weight:500;}
+nav a:hover{text-decoration:underline;}
+.hero{background:url('https://images.unsplash.com/photo-1517935706615-2717063c2225') center/cover no-repeat;height:500px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
+.hero h1{font-size:42px;background:rgba(0,0,0,0.6);padding:25px;border-radius:10px;}
+.section{padding:60px 40px;max-width:1100px;margin:auto;}
+.section h2{color:#d52b1e;margin-bottom:20px;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:white;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.card h3{margin-bottom:10px;color:#d52b1e;}
+button{background:#d52b1e;color:white;border:none;padding:12px 20px;border-radius:5px;cursor:pointer;margin-top:15px;transition:0.3s;}
+button:hover{background:#b21a12;}
+form{display:grid;gap:15px;}
+input,select,textarea{padding:12px;border-radius:5px;border:1px solid #ccc;}
+footer{background:#002147;color:white;text-align:center;padding:20px;margin-top:40px;font-size:14px;}
+.badge{background:#002147;color:white;padding:8px 15px;border-radius:20px;display:inline-block;margin-top:15px;}
+ul{margin-left:20px;list-style:disc;}
+a{color:#d52b1e;text-decoration:none;}
+a:hover{text-decoration:underline;}
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Prestito Sicuro Italia</h1>
-<p>Servizio Professionale di Mediazione Creditizia</p>
+<h1>Northern Maple Immigration</h1>
+<nav>
+<a href="#">Accueil</a>
+<a href="#services">Programmes</a>
+<a href="#contact">Contact</a>
+<a href="#paiement">Paiement</a>
+</nav>
 </header>
 
-<div class="section">
-<div class="form-box">
+<section class="hero">
+<h1>Votre passerelle vers le Canada 🇨🇦<br>Travail • Études • Résidence Permanente</h1>
+</section>
 
-<h2>Richiedi una consulenza gratuita</h2>
+<section class="section">
+<h2>Pourquoi nous choisir ?</h2>
+<p>Nous accompagnons les candidats africains dans la préparation administrative de leur projet d'immigration vers le Canada. Analyse de profil, optimisation de dossier et assistance personnalisée.</p>
+<span class="badge">Bureau administratif – Toronto, Canada</span>
+</section>
 
-<input type="text" id="nome" placeholder="Nome e Cognome">
-<input type="email" id="email" placeholder="Email">
-<input type="tel" id="telefono" placeholder="Telefono">
+<section class="section" id="services">
+<h2>Nos Programmes</h2>
+<div class="services">
 
-<select id="importo">
-<option value="">Importo richiesto</option>
-<option>1.000€ - 5.000€</option>
-<option>5.000€ - 20.000€</option>
-<option>20.000€ - 50.000€</option>
-</select>
+<div class="card">
+<h3>Entrée Express</h3>
+<p>Création et optimisation de profil pour augmenter votre score CRS.</p>
+</div>
 
-<button onclick="invia()">Invia richiesta</button>
+<div class="card">
+<h3>Permis d'Études</h3>
+<p>Recherche d'établissement + assistance à la demande de visa.</p>
+</div>
+
+<div class="card">
+<h3>Permis de Travail</h3>
+<p>Accompagnement LMIA et offres d'emploi.</p>
+</div>
+
+<div class="card">
+<h3>Regroupement Familial</h3>
+<p>Préparation des documents et suivi administratif.</p>
+</div>
 
 </div>
-</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Évaluation gratuite</h2>
+<form>
+  <input type="text" placeholder="Nom complet" required>
+  <input type="email" placeholder="Email" required>
+  <select required>
+    <option>Choisir un programme</option>
+    <option>Travail</option>
+    <option>Études</option>
+    <option>Résidence Permanente</option>
+  </select>
+  <textarea placeholder="Décrivez votre profil" required></textarea>
+  <button type="submit">Envoyer ma demande</button>
+</form>
+
+<p style="margin-top:15px;">📱 Ou rejoignez notre groupe Telegram :</p>
+<a href="https://t.me/https://t.me/+l-zIN0vWYoEyMjA0" target="_blank" style="text-decoration:none;">
+  <button style="display:flex;align-items:center;justify-content:center;background:#0088cc;color:white;border:none;padding:12px 20px;border-radius:5px;cursor:pointer;margin-top:10px;transition:0.3s;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width:20px;height:20px;margin-right:8px;">
+    Rejoindre le groupe Telegram
+  </button>
+</a>
+</section>
+
+<section class="section" id="paiement">
+<h2>Frais d’orientation / analyse de dossier</h2>
+<p>Frais : <strong>150 CAD</strong></p>
+<p>Méthodes de paiement acceptées :</p>
+<ul>
+<li>✔ Mobile Money (Afrique)</li>
+<li>✔ Carte bancaire (Visa / Mastercard)</li>
+</ul>
+<button>Payer maintenant</button>
+</section>
 
 <footer>
-<p>© 2016 Prestito Sicuro Italia</p>
-<p>Società di mediazione - Non eroghiamo direttamente finanziamenti.</p>
-<p>Conforme normativa italiana e regolamenti Banca d’Italia</p>
+<p>© 2014 Northern Maple Immigration Services</p>
+<p>Important : Nous offrons un service d’accompagnement administratif et orientation seulement. Nous ne sommes pas consultants réglementés par le gouvernement canadien.</p>
 </footer>
-
-<script>
-function invia(){
-
-let nome = document.getElementById("nome").value;
-let email = document.getElementById("email").value;
-let telefono = document.getElementById("telefono").value;
-let importo = document.getElementById("importo").value;
-
-let messaggio = `Nuova richiesta prestito:
-Nome: ${nome}
-Email: ${email}
-Telefono: ${telefono}
-Importo: ${importo}`;
-
-let token = "
-8674931679:AAHigr1qtX-YZ913O4g2WvxuTKKricXka5Q";
-let chat_id = "
-7716271490";
-
-fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-method: "POST",
-headers: {"Content-Type": "application/json"},
-body: JSON.stringify({
-chat_id: chat_id,
-text: messaggio
-})
-})
-.then(response => alert("Richiesta inviata con successo!"));
-}
-</script>
 
 </body>
 </html>
